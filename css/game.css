@@ -25,6 +25,10 @@
     background-color: #feff9d;
     }
 
+    #game {
+        padding: 10px;
+    }
+
     .btns {
     display: flex;
     justify-content: center;
