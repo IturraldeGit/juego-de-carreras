@@ -40,11 +40,15 @@ function setCanvasSize() {
         canvasSize = window.innerHeight * 0.8;
     }
 
+    canvasSize = Number(canvasSize.toFixed(0));
+
     canvas.setAttribute('width', canvasSize);
     canvas.setAttribute('height', canvasSize);
 
     elementsSize = canvasSize / 10;
 
+    playerPosition.x = undefined;
+    playerPosition.y = undefined;
     startGame();
 }
 
@@ -126,7 +130,6 @@ function movePlayer() {
 }
 
 function levelWin() {
-    console.log('Subiste de nivel');
     level++;
     startGame();
 }
