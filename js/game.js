@@ -8,6 +8,7 @@ const spanLives = document.querySelector('#lives');
 const spanTime = document.querySelector('#time');
 const spanRecord = document.querySelector('#record');
 const pResult = document.querySelector('#result');
+const btnRestart = document.querySelector('#restart');
 
 let canvasSize;
 let elementsSize;
@@ -165,6 +166,8 @@ function gameWin() {
         localStorage.setItem('record_time', playerTime);
         pResult.innerHTML = 'Nice, first new record';
     }
+
+    stopInterval();
 }
 
 function showLives() {
@@ -181,6 +184,10 @@ function showTime () {
 
 function showRecord() {
     spanRecord.innerHTML = localStorage.getItem('record_time');
+}
+
+function stopInterval() {
+    clearInterval(timeInterval);
 }
 
 window.addEventListener('keydown', moveByKeys);
@@ -229,4 +236,10 @@ function moveDown() {
         playerPosition.y += elementsSize;
         startGame();
     }
+}
+
+btnRestart.addEventListener('click', restartGame);
+
+function restartGame() {
+    window.location.reload();
 }

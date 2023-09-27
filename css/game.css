@@ -45,9 +45,16 @@
     margin: 0;
     padding: 5px 20px;
     width: 100px;
+    box-shadow: 0 6px 20px rgb(0, 0, 0);
+    font-size: 1.2rem;
     }
     button:not(:last-child) {
     margin-right: 10px;
+    }
+
+    .info {
+        display: flex;
+        padding: 0 20px;
     }
 
     .messages {
@@ -61,7 +68,19 @@
     p {
     display: block;
     margin: 0;
-    width: 100%;
+    width: 200px;
+    }
+
+#restart {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+        font-size: 0.8rem;
     }
 
     @media (max-width: 440px) {
